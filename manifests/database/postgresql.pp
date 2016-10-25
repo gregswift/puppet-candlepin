@@ -6,6 +6,7 @@ class candlepin::database::postgresql{
   $db_driver = 'org.postgresql.Driver'
   $db_type = $::candlepin::db_type
   $db_host = $::candlepin::db_host
+  $db_ssl  = $::candlepin::db_ssl
   $db_port = pick($::candlepin::db_port, 5432)
   $db_name = $::candlepin::db_name
   $db_user = $::candlepin::db_user

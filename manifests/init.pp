@@ -23,6 +23,10 @@
 #                                 from standard port of the :db_type.
 #                                 ex. mysql will default to 3306 and postgresql will default to 5432.
 #
+# $db_ssl::                       Boolean indicating if the connection to the database should be over
+#                                 an SSL connection.
+#                                 default false
+#
 # $db_name::                      The name of the Candlepin database;
 #                                 default 'candlepin'
 #
@@ -105,6 +109,7 @@ class candlepin (
   $db_type     = $candlepin::params::db_type,
   $db_host     = $candlepin::params::db_host,
   $db_port     = $candlepin::params::db_port,
+  $db_ssl      = $candlepin::params::db_ssl,
   $db_name     = $candlepin::params::db_name,
   $db_user     = $candlepin::params::db_user,
   $db_password = $candlepin::params::db_password,
